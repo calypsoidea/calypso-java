@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": [
+        "scripts-github/scripts/veronica/java_proxies"
+    ],
+    "java.project.referencedLibraries": [
+        "scripts-github/scripts/veronica/java_proxies/calypso.jar",
+        "scripts-github/scripts/veronica/java_proxies/YusProxy.jar"
+    ],
+    "java.configuration.runtimes": [
+        
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
+}

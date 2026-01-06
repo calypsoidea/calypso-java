@@ -1,0 +1,3 @@
+Main-Class: CalypsoProxy
+Class-Path: calypso.jar
+

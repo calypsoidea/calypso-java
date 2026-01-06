@@ -1,0 +1,87 @@
+falta testar use cases e as classes de Pool.cjs
+tem muita coisa de utilities que pode ir para outro arquivo
+
+tem coisas no OldPool que valem a pena virar uses cases
+
+ask deep if we can delete or add product features down the hieararchy,
+
+continuar a trabalhar com o padrao dispatcher
+
+implement function to code function into Hex call
+
+check better tools to test, like hardhat tools, foundry etc...
+
+
+se der tempo refatorar as outras classes para soh receber chain, ou criar chain em funcao do argumento apropriado...
+
+mencionar que soh roda em ethers v6 na documentacao das funcoes
+
+
+
+
+==========================================================
+
+comecar a baixar githubs preselecionados
+
+=========================
+
+Mint ?
+
+
+estah transferindo token e verificando se tem gasolina na conta?
+criar tambem um uso de caso que engloba chamar uma bomba de gasolina de sponsor para cobrir a gasolina caso nao tenha na conta de origem
+
+multitransfer
+multihop
+
+uniswap query e flashswap
+integrar com yus
+
+MEV ???? vai ser necessario?
+
+swap via router, good for multiple swaps
+swap via wrapping
+
+
+/* to talk with deep, turn Pool.csj them into eip-1599
+
+
+transportar funcoes para dentro de Pool
+checar se de Pool saem Tokens, not address
+
+on Contract Uniswap, in getPoolsByIndexRangeWithOptions change minLiquidityUSD to use all coins
+
+getPoolsByIndexRangeSmart refactor
+
+const uniswapQuery = ContractUniswapQuery.getInstance(chain); -> mudar para ethers
+
+
+
+melhorar forma de apresentar o nome da rede, check test-chain.cjs
+
+garantir que account e pool estao na mesma chain
+
+send raw tx
+
+
+wrap WETH, colocar funcoes especificas, colocar ABI, balanceof 
+
+seguir recomendacoes Deep
+
+
+
+em UniswapQueryData linha 144, console.log(`🔧 Creating Pool ${i + 1}/${pairs.length}: ${poolAddress}`);
+
+                    // Create Pool object (this makes individual RPC calls)
+                    const pool = await Pool.create(poolAddress, this.chain, dexType); // need to use CreateFrom Data
+                    
+                    // Verify the pool was initialized correctly
+                    if (pool && pool.token0 && pool.token1) {
+                        pools.push(pool);
+                        successCount++;
+                        
+usar createFromData
+
+no CHat, ele deu uma dica de um helper para ler classes java e transformaar em Json em Jscript... util para trans-processos
+
+instalar GIT
