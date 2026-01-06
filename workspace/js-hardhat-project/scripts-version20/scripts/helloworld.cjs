@@ -2,14 +2,14 @@
 
 async function main(params) {
  
-    const name = 'Kadu'
+    const name = params
 
     console.log(`Hello World, ${name}`) 
 
 
 }
 
-main()
+main("Kadu")
 
     
     
