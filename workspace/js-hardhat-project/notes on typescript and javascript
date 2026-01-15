@@ -1,0 +1,41 @@
+You can run TypeScript (TS) code in Node.js using three primary methods: a direct execution runner like tsx, native support in newer Node.js versions, or by transpiling the code to JavaScript first. 
+Method 1: Use a Direct Runner (tsx or ts-node) 
+This is the recommended approach for development and scripts as it allows you to run .ts files directly without a manual compilation step. 
+Install a runner (e.g., tsx is often faster and has better ESM support than ts-node).
+bash
+npm install -D tsx
+Run your file using the tsx command instead of node.
+bash
+npx tsx yourfile.ts
+You can also use ts-node in a similar fashion:
+bash
+npx ts-node yourfile.ts
+ 
+Method 2: Use Native Node.js Support (Node v22.6.0+) 
+Recent versions of Node.js offer experimental native support for running TypeScript files by stripping type information on the fly. 
+If you are using Node.js v22.18.0 or later, you can run erasable TypeScript code directly without any flags:
+bash
+node yourfile.ts
+For versions between v22.6.0 and v22.17.0, use the --experimental-strip-types flag:
+bash
+node --experimental-strip-types yourfile.ts
+ 
+Method 3: Compile to JavaScript, then Run 
+This method is standard for production environments, as the code is pre-compiled for maximum performance. 
+Install TypeScript in your project:
+bash
+npm install -D typescript @types/node
+npx tsc --init
+The tsc --init command creates a tsconfig.json file to configure the compiler.
+Compile your TypeScript file (yourfile.ts) into a JavaScript file (yourfile.js) using the TypeScript compiler (tsc):
+bash
+npx tsc yourfile.ts
+Run the generated JavaScript file using Node.js:
+bash
+node yourfile.js
+ 
+Summary of Methods
+Method 	Use Case	Pros	Cons
+tsx	Development, scripts	Fast, simple setup, no config needed	Does not perform type checking
+Native Node.js	Modern Node.js env	No extra tools/installs needed	Requires newer Node version; still experimental
+Transpilation	Production	Optimized performance, full type safety	Requires a build step
