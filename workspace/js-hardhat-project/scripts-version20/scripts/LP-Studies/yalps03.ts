@@ -24,6 +24,5 @@ const model = {
   }
   
   const solution = solve(model)
-  // { status: "optimal", result: 14400, variables: [ ["table", 8], ["dresser", 3] ] }
-
+  
   console.log(solution)
