@@ -7,7 +7,7 @@ var g = new Graph();
 // Add node "a" to the graph with no label
 g.setNode("a");
 
-console.log(g.hasNode("a"));
+console.log("Does it have nodes? " + g.hasNode("a"));
 // => true
 
 // Add node "b" to the graph with a String label
