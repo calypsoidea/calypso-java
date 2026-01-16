@@ -14,7 +14,7 @@ const model = {
     },
     variables: {
       x1: { first: 1, second: 0, profit: 2 },
-      x2: { first: 0, second: -1, profit: 20 },
+      x2: { first: 0, second: 1, profit: 20 },
       x3: { first: 1, second: 0, profit: 1 },
       x4: { first: 1, second: 1, profit: 11 },
       x5: { first: 2, second: 1, profit: 12 },

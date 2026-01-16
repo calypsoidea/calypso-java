@@ -9,15 +9,18 @@ const model = {
     direction: "maximize" as const,
     objective: "profit",
     constraints: {
-      wood: { max: 300 },
-      labor: { max: 110 }, // labor should be <= 110
-      storage: lessEq(400), // you can use the helper functions instead
+      first: { max: 1500 },
+      second: { max: 100 }, 
+      third: { max: 100 }
     },
     variables: {
-      table: { wood: 30, labor: 5, profit: 1200, storage: 30 },
-      dresser: { wood: 20, labor: 10, profit: 1600, storage: 50 },
+      x1: { first: 100, second: 7, third: 3, profit: 60 },
+      x2: { first: 100, second: 5, third: 5, profit: 60 },
+      x3: { first: 100, second: 3, third: 10, profit: 90 },
+      x4: { first: 100, second: 10, third: 15, profit: 90 }
     },
-    integers: ["table", "dresser"], // these variables must have an integer value in the solution
+    //integers: ["table", "dresser"], // these variables must have an integer value in the solution
+    integers: false,
   }
   
   const solution = solve(model)
