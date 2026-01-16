@@ -9,14 +9,15 @@ const model = {
     direction: "maximize" as const,
     objective: "profit",
     constraints: {
-      first: { max: 100 },
-      second: { max: 400 }, // labor should be <= 110
-      third: lessEq(3200), // you can use the helper functions instead
+      first: { max: -700 },
+      second: { max: -400 }, // labor should be <= 110
     },
     variables: {
-      a: { first: 1, second: 5, third: 40, profit: 70 },
-      b: { first: 1, second: 4, third: 20, profit: 210 },
-      c: { first: 1, second: 4, third: 30, profit: 140 },
+      x1: { first: -1, second: 0, profit: -2 },
+      x2: { first: 0, second: -1, profit: -20 },
+      x3: { first: -1, second: 0, profit: -1 },
+      x4: { first: -1, second: -1, profit: -11 },
+      x5: { first: -2, second: -1, profit: -12 },
     },
     //integers: ["table", "dresser"], // these variables must have an integer value in the solution
     integers: false,
